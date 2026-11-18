@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Deen's Apparels · Men's & unisex thrift, North Legon</title>
+  <meta name="description" content="Hand-picked thrift for men and unisex: shirts, tees, jackets, cargos, sneakers. Order or pre-order on WhatsApp. North Legon, Accra.">
+  <meta name="theme-color" content="#221814">
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Deen's Apparels · Thrift for men & unisex">
+  <meta property="og:description" content="Hand-picked shirts, tees, jackets, cargos and sneakers. Order or pre-order on WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/shop.js"></script>
+</head>
+<body>
+  <a class="skip" href="#shop">Skip to the shop</a>
+
+  <p class="preview-strip" id="previewStrip" hidden>Preview with <b>sample items and prices</b>. Deen's own stock is coming soon.</p>
+
+  <header class="header" id="header">
+    <div class="wrap header-in">
+      <a class="brand" href="#top" aria-label="Deen's Apparels home"><span>Deen's</span><small>Apparels</small></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#preorder">Pre-order</a>
+        <a href="#how">How to order</a>
+      </nav>
+      <button class="bag-btn" id="bagBtn" type="button" aria-label="Open your bag, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Bag</span>
+        <span class="bag-count" id="bagCount" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-text">
+          <p class="eyebrow">Men's &amp; unisex thrift · North Legon</p>
+          <h1>Fresh fits.<br><span class="rust">Fair prices.</span></h1>
+          <p class="lede">Hand-picked shirts, tees, jackets, cargos and sneakers. Pick your size, add to bag and order on WhatsApp. Can't find your size? Pre-order it.</p>
+          <div class="hero-cta">
+            <a class="btn btn-dark" href="#shop">Shop the rack</a>
+            <a class="btn btn-line" href="#preorder">How pre-order works</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="fade-img" src="images/hero.jpg" alt="Man in a light denim jacket and dark trousers standing outdoors" width="1200" height="1800" fetchpriority="high">
+          <span class="sticker" aria-hidden="true">Hand<br>picked</span>
+          <button class="pick" id="pick" type="button" hidden>
+            <img id="pickImg" src="" alt="">
+            <span><small>Just in</small><b id="pickName"></b><i id="pickPrice"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop" aria-labelledby="shopTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="shopTitle">The rack</h2>
+          <p id="shopCount" class="muted"></p>
+        </div>
+        <div class="chips" id="chips" role="tablist" aria-label="Categories"></div>
+        <div class="grid" id="grid" aria-live="polite">
+          <p class="loading">Loading items…</p>
+        </div>
+        <p class="load-err" id="loadErr" hidden>Couldn't load the items. Check your internet and <button type="button" id="retry">try again</button>.</p>
+      </div>
+    </section>
+
+    <section class="preorder" id="preorder" aria-labelledby="preTitle">
+      <div class="wrap pre-in">
+        <div>
+          <p class="eyebrow">Pre-order</p>
+          <h2 id="preTitle">Your size sold out? Pre-order it.</h2>
+          <p>New stock comes in when the rack runs low. Items marked <b class="tag-inline">Pre-order</b> are on the way: order now to reserve your size. For anything sold out, tap <b>Request a pre-order</b> and Deen will tell you if it's coming back.</p>
+          <a class="btn btn-light" id="preWa" href="#" target="_blank" rel="noopener">Ask about the next restock</a>
+        </div>
+        <img class="fade-img" src="images/about.jpg" alt="Two people looking through clothes on a rail in a shop" width="1000" height="667" loading="lazy">
+      </div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="howTitle">
+      <div class="wrap">
+        <h2 id="howTitle">How to order</h2>
+        <ol class="steps">
+          <li><b>Pick your size</b><span>Check the photos and condition, choose your size and add to bag.</span></li>
+          <li><b>Send on WhatsApp</b><span>Your bag becomes one tidy message. Just tap Send.</span></li>
+          <li><b>Pay, then receive</b><span>Deen confirms your total and sends payment details. Once you've paid, it's delivered or ready to pick up.</span></li>
+        </ol>
+        <div class="facts">
+          <p><b>Delivery</b> around North Legon and Accra. The fee depends on where you are; Deen tells you before you pay.</p>
+          <p><b>Pick up</b> in North Legon. Choose it in your bag.</p>
+          <p><b>Payment</b> is made before delivery or pick up.</p>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-light" id="askWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn btn-ghost" id="tiktok" href="#" target="_blank" rel="noopener" hidden>TikTok</a>
+          <a class="btn btn-ghost" id="instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p class="brand"><span>Deen's</span><small>Apparels</small></p>
+      <p>© <span id="year"></span> Deen's Apparels · North Legon, Accra</p>
+      <p class="muted">Website by Salim Saad</p>
+    </div>
+  </footer>
+
+  <button class="float-bag" id="floatBag" type="button" hidden>View bag · <span id="floatTotal"></span></button>
+
+  <!-- Item sheet -->
+  <dialog class="sheet" id="productSheet" aria-labelledby="pName">
+    <form method="dialog" class="sheet-in" id="productForm">
+      <button class="x" value="close" aria-label="Close" formnovalidate>×</button>
+      <div class="p-photo">
+        <img id="pImg" src="" alt="">
+        <div class="thumbs" id="pThumbs"></div>
+      </div>
+      <div class="p-body">
+        <p class="eyebrow" id="pCat"></p>
+        <h3 id="pName"></h3>
+        <p class="p-meta"><span class="cond" id="pCond"></span><span class="pre-badge" id="pPre" hidden>Pre-order</span></p>
+        <p class="p-desc" id="pDesc"></p>
+        <fieldset class="opt" id="pSizes"><legend>Size</legend><div class="pills" id="pSizeList"></div></fieldset>
+        <fieldset class="opt" id="pChoices"><legend id="pChoiceTitle">Colour</legend><div class="pills" id="pChoiceList"></div></fieldset>
+        <div class="p-buy" id="pBuy">
+          <div class="qty" aria-label="Quantity">
+            <button type="button" data-q="-1" aria-label="One less">−</button>
+            <output id="pQty">1</output>
+            <button type="button" data-q="1" aria-label="One more">+</button>
+          </div>
+          <button class="btn btn-dark grow" type="button" id="pAdd"><span id="pAddLabel">Add to bag</span> · <span id="pTotal"></span></button>
+        </div>
+        <p class="pre-note muted small" id="pPreNote" hidden>Pre-order: pay to reserve your size. Deen tells you when it arrives.</p>
+        <div class="p-sold" id="pSold" hidden>
+          <p><b>Sold out.</b> Want this in your size? Ask Deen to bring it in.</p>
+          <a class="btn btn-dark" id="pAskWa" href="#" target="_blank" rel="noopener">Request a pre-order</a>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Bag -->
+  <dialog class="drawer" id="bag" aria-labelledby="bagTitle">
+    <div class="drawer-in">
+      <div class="drawer-head">
+        <h3 id="bagTitle">Your bag</h3>
+        <button class="x" type="button" id="bagClose" aria-label="Close bag">×</button>
+      </div>
+      <div class="bag-empty" id="bagEmpty">
+        <p>Your bag is empty.</p>
+        <button class="btn btn-line" type="button" id="bagShop">Start shopping</button>
+      </div>
+      <ul class="bag-list" id="bagList"></ul>
+      <form class="checkout" id="checkout" novalidate>
+        <div class="sum"><span>Items</span><b id="bagTotal"></b></div>
+        <p class="muted small">Deen confirms the delivery fee on WhatsApp. Payment is made before delivery or pick up.</p>
+        <fieldset class="seg">
+          <legend>How do you want it?</legend>
+          <label><input type="radio" name="how" value="Delivery" checked> Delivery</label>
+          <label><input type="radio" name="how" value="Pick up"> Pick up</label>
+        </fieldset>
+        <label class="field">Your name<input id="cName" name="cName" autocomplete="name" maxlength="60"></label>
+        <label class="field" id="areaField">Delivery area and landmark<input id="cArea" name="cArea" maxlength="120" placeholder="e.g. Haatso, near the Total station"></label>
+        <label class="field">Note (optional)<textarea id="cNote" name="cNote" rows="2" maxlength="300"></textarea></label>
+        <p class="err" id="cErr" role="alert"></p>
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Send order on WhatsApp
+        </button>
+      </form>
+      <div class="sent" id="sent" hidden>
+        <p><b>WhatsApp has opened with your order.</b> Tap Send there, and Deen will reply to confirm.</p>
+        <div class="sent-actions">
+          <button class="btn btn-dark" type="button" id="clearBag">Done, empty my bag</button>
+          <button class="btn btn-line" type="button" id="keepBag">Keep my bag</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
