@@ -10,12 +10,13 @@
 // ------------------------------------------------------------------
 
 export const FIREBASE_CONFIG = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
+  // Project "90s-bwoy-clothing" (id bwoy-clothing-90s), on Salim's Google account. Set up 2026-11-19.
+  apiKey: "AIzaSyAAiFs5zhPoW3knCAkXP2zVO3JlAGxf-zU",
+  authDomain: "bwoy-clothing-90s.firebaseapp.com",
+  projectId: "bwoy-clothing-90s",
+  storageBucket: "bwoy-clothing-90s.firebasestorage.app",
+  messagingSenderId: "492380466164",
+  appId: "1:492380466164:web:7c160bc6a6e867ebe4a7a1",
 };
 
 export const CLOUDINARY = {

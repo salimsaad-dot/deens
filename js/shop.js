@@ -72,7 +72,7 @@ function card(p) {
 
 function renderGrid() {
   const list = filter === "all" ? products : filter === "preorder" ? products.filter((p) => p.preorder) : products.filter((p) => p.category === filter);
-  $("grid").innerHTML = list.length ? list.map(card).join("") : `<p class="loading">Nothing here yet.</p>`;
+  $("grid").innerHTML = list.length ? list.map(card).join("") : `<p class="loading">${filter === "all" ? "New stock is dropping soon. Check back, or ask on WhatsApp what's coming." : "Nothing here yet."}</p>`;
   $("shopCount").textContent = `${list.length} item${list.length === 1 ? "" : "s"}`;
   fadeIn($("grid"));
 }
