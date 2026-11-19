@@ -1,4 +1,4 @@
-// Deen's Apparels · the shop page: items, bag, and the WhatsApp order.
+// 90's Bwoy Clothing · the shop page: items, bag, and the WhatsApp order.
 import { getProducts, CATEGORIES, SHOP, LIVE, money, fromPrice, samePrice, isSoldOut, cover, categoryLabel, isNew } from "./store.js";
 
 const $ = (id) => document.getElementById(id);
@@ -125,7 +125,7 @@ function openProduct(id) {
   $("pPreNote").hidden = !current.preorder || sold;
   $("pAddLabel").textContent = current.preorder ? "Pre-order" : "Add to bag";
   $("pSold").hidden = !sold;
-  $("pAskWa").href = wa(`Hello ${SHOP.name}! I'd like to pre-order the ${current.name}.\n*Size:* \nPlease let me know if you can bring it in. Thank you!`);
+  $("pAskWa").href = wa(`Hello ${SHOP.name}! I'd like to pre-order the ${current.name}.\n*Size / waist:* \nPlease let me know if you can bring it in. Thank you!`);
   updateTotal();
   sheet.showModal();
   sheet.querySelector(".sheet-in").scrollTop = 0;
@@ -165,7 +165,7 @@ function renderBag() {
       <img src="${esc(cover(l.p))}" alt="">
       <div class="line-info">
         <b>${esc(l.p.name)}</b>
-        <span>Size ${esc([l.option, l.choice].filter(Boolean).join(" · "))}${l.pre ? ' · <i class="pre-badge">Pre-order</i>' : ""}</span>
+        <span>${l.option === "One size" ? "" : "Size "}${esc([l.option, l.choice].filter(Boolean).join(" · "))}${l.pre ? ' · <i class="pre-badge">Pre-order</i>' : ""}</span>
         <span class="line-price">${money(l.price * l.qty)}</span>
       </div>
       <div class="qty small-qty">
@@ -204,7 +204,7 @@ checkout.querySelectorAll("input").forEach((el) => el.addEventListener("input", 
 /** The WhatsApp message Deen receives. In-stock items and pre-orders are listed separately. */
 export function orderText(lines, { name, how, area, note }) {
   const row = (l, n) => {
-    const what = [`size ${l.option}`, l.choice].filter(Boolean).join(", ");
+    const what = [l.option === "One size" ? l.option : `size ${l.option}`, l.choice].filter(Boolean).join(", ");
     return `${n}. ${l.p.name} (${what}) × ${l.qty} = ${money(l.price * l.qty)}`;
   };
   const now = lines.filter((l) => !l.pre), pre = lines.filter((l) => l.pre);
@@ -212,7 +212,7 @@ export function orderText(lines, { name, how, area, note }) {
   now.forEach((l, i) => out.push(row(l, i + 1)));
   if (pre.length) {
     if (now.length) out.push("");
-    out.push("*Pre-order:*");
+    out.push("*Pre-order (50% deposit):*");
     pre.forEach((l, i) => out.push(row(l, now.length + i + 1)));
   }
   out.push("", `*Items total:* ${money(lines.reduce((s, l) => s + l.price * l.qty, 0))}`);
@@ -289,7 +289,7 @@ $("retry").addEventListener("click", load);
 $("previewStrip").hidden = LIVE;
 $("askWa").href = wa(`Hello ${SHOP.name}! I have a question.`);
 $("preWa").href = wa(`Hello ${SHOP.name}! When is the next restock? I'm looking for: `);
-for (const k of ["tiktok", "instagram"]) if (SHOP[k]) { $(k).href = SHOP[k]; $(k).hidden = false; }
+for (const k of ["snapchat", "tiktok", "instagram"]) if (SHOP[k]) { $(k).href = SHOP[k]; $(k).hidden = false; }
 $("year").textContent = new Date().getFullYear();
 const header = $("header");
 const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);

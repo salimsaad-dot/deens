@@ -1,4 +1,4 @@
-/* Deen's Apparels · espresso + rust. Anton (display) + Archivo (text). */
+/* 90's Bwoy Clothing (Deen) · espresso + rust. Anton (display) + Archivo (text). */
 :root {
   --cocoa: #221814;      /* espresso: main ink */
   --cocoa-2: #3d2e26;
@@ -238,7 +238,7 @@ html:has(dialog[open]) { overflow: hidden; }
 .facts { display: grid; gap: 10px; margin: 36px 0 8px; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, .15); color: #d8cabd; }
 .facts p { margin: 0; }
 .facts b { color: var(--cream); }
-@media (min-width: 820px) { .facts { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+@media (min-width: 820px) { .facts { grid-template-columns: repeat(2, 1fr); gap: 20px 48px; } }
 .thumbs { display: flex; gap: 8px; padding: 10px 20px 0; overflow-x: auto; }
 .thumbs:empty { display: none; }
 .thumbs button { flex: none; width: 64px; height: 64px; padding: 0; border: 2px solid transparent; border-radius: 4px; overflow: hidden; background: var(--sand); cursor: pointer; }

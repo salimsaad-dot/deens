@@ -1,4 +1,4 @@
-// Deen's Apparels · shop settings
+// 90's Bwoy Clothing (Deen) · shop settings
 // ------------------------------------------------------------------
 // 1) FIREBASE: paste the web-app config from the Firebase console.
 //    While apiKey is empty the shop runs in PREVIEW MODE: sample products,
@@ -24,22 +24,25 @@ export const CLOUDINARY = {
 };
 
 export const SHOP = {
-  name: "Deen's Apparels",
-  // DEMO: Salim's number for now (Deen asked). Going live: Deen's WhatsApp number.
+  name: "90's Bwoy Clothing",
+  // DEMO: Salim's number for now (Deen asked). Going live: Deen's WhatsApp 233558338483 (055 833 8483).
   whatsapp: "233577428684",
   currency: "GH₵",
-  area: "North Legon",
-  tiktok: "",    // TODO: link (empty = hidden)
-  instagram: "", // TODO: link (empty = hidden)
+  area: "Accra",
+  snapchat: "https://www.snapchat.com/add/deen_salim23",
+  tiktok: "",    // none yet (empty = hidden)
+  instagram: "", // none yet (empty = hidden)
 };
 
 export const CATEGORIES = [
-  { id: "tees", label: "T-shirts" },
-  { id: "shirts", label: "Shirts" },
-  { id: "outerwear", label: "Jackets & hoodies" },
-  { id: "bottoms", label: "Trousers & jeans" },
+  { id: "tees", label: "Graphic tees" },
+  { id: "jackets", label: "Jackets" },
+  { id: "hoodies", label: "Hoodies" },
+  { id: "jeans", label: "Baggy jeans" },
   { id: "shorts", label: "Shorts" },
-  { id: "shoes", label: "Sneakers & shoes" },
+  { id: "sneakers", label: "Sneakers" },
+  { id: "caps", label: "Caps" },
+  { id: "bags", label: "Bags" },
 ];
 
 export const CONDITIONS = ["New with tags", "Like new", "Very good", "Good"];

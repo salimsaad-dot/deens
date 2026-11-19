@@ -1,4 +1,4 @@
-// Deen's Apparels · product data (shared by the shop and the owner page)
+// 90's Bwoy Clothing · product data (shared by the shop and the owner page)
 //
 // PREVIEW mode (no Firebase config): sample products; the owner page saves
 // changes in this browser's localStorage only, so a visitor never sees them.
@@ -56,7 +56,7 @@ export function cleanProduct(p) {
 }
 
 /* ---------- Preview store (localStorage) ---------- */
-const KEY = "deens-preview-v1";
+const KEY = "deens-preview-v2"; // v2: new categories (Deen, 19 Nov)
 function readPreview() {
   try {
     const saved = JSON.parse(localStorage.getItem(KEY));

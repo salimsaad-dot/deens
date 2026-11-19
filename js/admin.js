@@ -1,4 +1,4 @@
-// Deen's Apparels · owner page: add, edit, sell out (whole item or one size), pre-order, hide, delete.
+// 90's Bwoy Clothing · owner page: add, edit, sell out (whole item or one size), pre-order, hide, delete.
 import { LIVE, CATEGORIES, CONDITIONS, MAX_PHOTOS, getProducts, saveProduct, setFlags, deleteProduct, uploadPhoto, resetPreview,
   onOwner, signIn, signOut, money, fromPrice, samePrice, isSoldOut, cover, categoryLabel } from "./store.js";
 
